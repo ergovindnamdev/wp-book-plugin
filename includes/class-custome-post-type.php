@@ -85,9 +85,14 @@ class WPBook_Custom_post_type
                 'labels' => $labels,
                 'public' => true,
                 'show_ui' => true,
-                'supports' => array('title', 'editor'),
+                'has_archive' => true,
+                'supports' => array('title', 'editor', 'thumbnail', 'author'),
                 'show_in_nav_menus' => true,
                 '_builtin' => false,
+                'rewrite' => array( 
+                    'slug' => $this->post_type_name, // use this slug instead of post type name
+                    'with_front' => true // if you have a permalink base such as /blog/ then setting this to false ensures your custom post type permalink structure will be /products/ instead of /blog/products/
+                ),
             )
         );
 
