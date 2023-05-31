@@ -96,6 +96,7 @@ class WPBook
 		include_once dirname(WPBOOK_PLUGIN_FILE) . '/includes/class-book-shortcode.php';
 		include_once dirname(WPBOOK_PLUGIN_FILE) . '/includes/class-book-widget.php';
 		include_once dirname(WPBOOK_PLUGIN_FILE) . '/includes/class-book-dashboard-widget.php';
+		include_once dirname(WPBOOK_PLUGIN_FILE) . '/includes/class-book-settings.php';
 	}
 
 	/**
