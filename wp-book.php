@@ -9,30 +9,29 @@
  * Domain Path:     /languages
  * Version:         0.1.0
  *
- * @package         Wp_Book
+ * @package Wp_Book
  */
 
+defined( 'ABSPATH' ) || exit;
 
- defined('ABSPATH') || exit;
+if ( ! defined( 'WPBOOK_PLUGIN_FILE' ) ) {
+	define( 'WPBOOK_PLUGIN_FILE', __FILE__ );
+}
 
- if (!defined('WPBOOK_PLUGIN_FILE')) {
-     define('WPBOOK_PLUGIN_FILE', __FILE__);
- }
- 
- // Include the main class.
- if (!class_exists('WPBook', false)) {
-     include_once dirname(WPBOOK_PLUGIN_FILE) . '/includes/class-plugin-activation.php';
- }
- 
- /**
-  * Returns the main instance of WPBook Plugin.
-  *
-  * @since  2.1
-  * @return Main Instance
-  */
- function WPBook() {
-     return WPBook::instance();
- }
- 
- // Global for backwards compatibility.
- $GLOBALS['wpbook-plugin'] = WPBook();
+// Include the main class.
+if ( ! class_exists( 'WPBook', false ) ) {
+	include_once dirname( WPBOOK_PLUGIN_FILE ) . '/includes/class-wpbook.php';
+}
+
+/**
+ * Returns the main instance of WPBook Plugin.
+ *
+ * @since  2.1
+ * @return Main Instance
+ */
+function wp_book() {
+	return WPBook::instance();
+}
+
+// Global for backwards compatibility.
+$GLOBALS['wpbook-plugin'] = wp_book();
