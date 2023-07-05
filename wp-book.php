@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name:     WP Book
- * Plugin URI:      www.futurebridge.com
+ * Plugin URI:      
  * Description:     WP Book Plugin for custom post type
- * Author:          Futurebridge
- * Author URI:      www.futurebridge.com
+ * Author:          Govind Namdev
+ * Author URI:      
  * Text Domain:     wp-book
  * Domain Path:     /languages
  * Version:         0.1.0

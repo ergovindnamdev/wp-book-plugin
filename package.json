@@ -3,7 +3,7 @@
   "name": "wp-book",
   "version": "0.1.0",
   "main": "Gruntfile.js",
-  "author": "Futurebridge",
+  "author": "Govind Namdev",
   "scripts" : {
     "start" : "grunt default" ,
     "readme" : "grunt readme",
